@@ -1,0 +1,80 @@
+stages:
+  - sonarqube
+  - build
+
+sonarqube:
+  stage: sonarqube
+  only:
+    - dev
+  script:
+    - export GO111MODULE=off
+    - p=`pwd`
+    - echo $p
+    - name=$CI_PROJECT_NAME
+    - export GOPATH=/tmp/demo
+    - export SRCPATH=/tmp/demo/src
+    - rm -rf $SRCPATH
+    - mkdir -p $SRCPATH
+    - /usr/bin/cp -R $p $SRCPATH/
+    - cd $SRCPATH/$name
+    - ls -l
+    - export DEV_TEST_SKIP=false
+    - golangci-lint run --issues-exit-code 0 --out-format checkstyle ./... > golangci-report.out 
+    - gometalinter $(go list ./...) > gometalinter-report.out || true
+    - golint $(go list ./...) > golint-report.out || true
+    - go vet $(go list ./...) 2> govet-report.out || true
+    - go test -p 1 -v $(go list ./...) -coverpkg=./... -count=1 -coverprofile=coverage.out -json | tee report.json
+  
+    - /data/src/sonar-scanner-4.2.0.1873-linux/bin/sonar-scanner -Dsonar.projectKey=$name -Dsonar.host.url=http://10.60.81.141:9009 -Dsonar.login=f91a7c73e7722f12b09dd84d3bd57e23f4f0659f -Dsonar.sources=./ -Dsonar.exclusions=**/*_test.go,**/vendor/** -Dsonar.tests=./ -Dsonar.test.inclusions=**/*_test.go -Dsonar.test.exclusions=**/vendor/**
+    - go tool cover -func=coverage.out
+  tags:
+    - demo-dev
+
+job:
+  stage: build
+  only:
+  - dev
+  script:
+  - export GO111MODULE=off
+  - p=`pwd`
+  - echo $p
+  - name=$CI_PROJECT_NAME
+  - export GOPATH=/tmp/demo
+  - export SRCPATH=/tmp/demo/src
+  - rm -rf $GOPATH
+  - mkdir -p $SRCPATH
+  - cp -R $p $SRCPATH/
+  - cd $SRCPATH/$name
+  - ls -la
+  - echo `pwd`
+  - go build -o build/package/example cmd/example/*.go
+  - sudo systemctl restart demo-example
+  - sudo systemctl status demo-example
+#  - sudo /root/go/bin/goreporter -p . -r /tmp/reporter
+  tags:
+  - demo-dev
+
+other:
+  stage: build
+  only:
+    - /^feature-.*$/
+    - /^hotfix-.*$/
+    - /^merge-.*$/
+    - master
+  script:
+    - export GO111MODULE=off
+    - p=`pwd`
+    - echo $p
+    - name=$CI_PROJECT_NAME
+    - export GOPATH=/tmp/demo
+    - export SRCPATH=/tmp/demo/src
+    - rm -rf $SRCPATH
+    - mkdir -p $SRCPATH
+    - /usr/bin/cp -R $p $SRCPATH/
+    - cd $SRCPATH/$name
+    - ls -l
+    - go version
+    - go test -p 1 -v $(go list ./...) -count=1 -coverprofile=coverage.out
+    - go tool cover -func=coverage.out
+  tags:
+    - demo-dev
