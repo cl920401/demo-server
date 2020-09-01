@@ -1,9 +1,9 @@
 package test
 
 import (
-	"demo-server/lib/costool"
 	"demo-server/app/internal/context"
 	"demo-server/app/internal/message"
+	"demo-server/lib/costool"
 	"encoding/json"
 	"net/http"
 	"net/http/httptest"

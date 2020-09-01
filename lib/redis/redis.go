@@ -1,8 +1,8 @@
 package redis
 
 import (
-	"demo-server/lib/log"
 	"demo-server/lib/config"
+	"demo-server/lib/log"
 	"encoding/json"
 	"fmt"
 	"sync"

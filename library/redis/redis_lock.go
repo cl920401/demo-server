@@ -1,8 +1,8 @@
 package redis
 
 import (
-	"errors"
 	"demo-server/utils/tools"
+	"errors"
 
 	"demo-server/lib/log"
 	_ "demo-server/lib/redis"

@@ -8,10 +8,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.13.4/libexec" />
-  <component name="GoLibraries">
-    <option name="indexEntireGoPath" value="false" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1gu1z1ur6J3kfDgGwU0JDWbphSn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -26,25 +27,23 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="settings.editor.selected.configurable" value="go.sdk" />
   </component>
   <component name="RunManager">
-    <configuration name="go build demo-server/cmd/example" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build demo-server/cmd/example/main" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="demo-server" />
       <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <envs>
-        <env name="GO111MODULE" value="off" />
-      </envs>
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/cmd/example/main.go" />
       <package value="demo-server/cmd/example" />
+      <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build demo-server/cmd/example" />
+        <item itemvalue="Go Build.go build demo-server/cmd/example/main" />
       </list>
     </recent_temporary>
   </component>
@@ -72,22 +71,46 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="117" key="#Go_Modules_(vgo)/0.0.1440.900@0.0.1440.900" timestamp="1598949936822" />
-    <state x="184" y="113" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598952766448">
+    <state x="184" y="113" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598954607583">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="184" y="113" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1598952766448" />
-    <state x="438" y="107" key="#go_build_demo-server/cmd/example" timestamp="1598952774669">
+    <state x="184" y="113" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1598954607583" />
+    <state x="438" y="107" key="#go_build_demo-server/cmd/example" timestamp="1598954163998">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="438" y="107" key="#go_build_demo-server/cmd/example/0.0.1440.900@0.0.1440.900" timestamp="1598952774669" />
+    <state x="438" y="107" key="#go_build_demo-server/cmd/example/0.0.1440.900@0.0.1440.900" timestamp="1598954163998" />
+    <state x="427" y="107" key="#go_build_demo-server/cmd/example/main" timestamp="1598954247374">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="427" y="107" key="#go_build_demo-server/cmd/example/main/0.0.1440.900@0.0.1440.900" timestamp="1598954247374" />
     <state x="583" y="246" key="FileChooserDialogImpl" timestamp="1598950268502">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="583" y="246" key="FileChooserDialogImpl/0.0.1440.900@0.0.1440.900" timestamp="1598950268502" />
-    <state x="229" y="89" key="SettingsEditor" timestamp="1598952809186">
+    <state x="582" y="355" key="Github.ShareDialog" timestamp="1598953837451">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1598952809186" />
+    <state x="582" y="355" key="Github.ShareDialog/0.0.1440.900@0.0.1440.900" timestamp="1598953837451" />
+    <state width="699" height="245" key="GridCell.Tab.0.bottom" timestamp="1598954619680">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="699" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1598954619680" />
+    <state width="699" height="245" key="GridCell.Tab.0.center" timestamp="1598954619678">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="699" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1598954619678" />
+    <state width="699" height="245" key="GridCell.Tab.0.left" timestamp="1598954619677">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="699" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1598954619677" />
+    <state width="699" height="245" key="GridCell.Tab.0.right" timestamp="1598954619679">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="699" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1598954619679" />
+    <state x="326" y="103" key="SettingsEditor" timestamp="1598954596655">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="326" y="103" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1598954596655" />
     <state x="383" y="219" width="824" height="528" key="find.popup" timestamp="1598952166998">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
