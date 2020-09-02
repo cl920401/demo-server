@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7152496-96ad-40b5-a72f-fcd03f446e3f" name="Default Changelist" comment="" />
+    <list default="true" id="f7152496-96ad-40b5-a72f-fcd03f446e3f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/example/middleware/hook.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/example/conf.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/example/conf_dev.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/example/conf_test.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/cors.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/hook.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/internal/common/common.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/common.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/example/flag.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/example/flag.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/example/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/example/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example" beforeDir="false" afterPath="$PROJECT_DIR$/example" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +31,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
@@ -28,11 +41,23 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/internal/message" />
     <property name="settings.editor.selected.configurable" value="go.sdk" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/internal/message" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/app/example" />
+      <recent name="$PROJECT_DIR$/configs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/configs/example" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="go build demo-server/cmd/example/main" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build demo-server/cmd/example" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="demo-server" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
@@ -43,7 +68,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build demo-server/cmd/example/main" />
+        <item itemvalue="Go Build.go build demo-server/cmd/example" />
       </list>
     </recent_temporary>
   </component>
@@ -62,6 +87,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="format" />
+    <MESSAGE value="add config" />
+    <option name="LAST_COMMIT_MESSAGE" value="add config" />
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
     <proxy>direct</proxy>
@@ -71,10 +101,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="117" key="#Go_Modules_(vgo)/0.0.1440.900@0.0.1440.900" timestamp="1598949936822" />
-    <state x="184" y="113" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598954607583">
+    <state x="184" y="113" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598959314255">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="184" y="113" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1598954607583" />
+    <state x="184" y="113" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1598959314255" />
     <state x="438" y="107" key="#go_build_demo-server/cmd/example" timestamp="1598954163998">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -83,6 +113,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="427" y="107" key="#go_build_demo-server/cmd/example/main/0.0.1440.900@0.0.1440.900" timestamp="1598954247374" />
+    <state x="312" y="50" key="CommitChangelistDialog2" timestamp="1599016413633">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="312" y="50" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1599016413633" />
+    <state x="144" y="78" key="DiffContextDialog" timestamp="1598954641223">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="144" y="78" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1598954641223" />
     <state x="583" y="246" key="FileChooserDialogImpl" timestamp="1598950268502">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -91,29 +129,68 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="582" y="355" key="Github.ShareDialog/0.0.1440.900@0.0.1440.900" timestamp="1598953837451" />
-    <state width="699" height="245" key="GridCell.Tab.0.bottom" timestamp="1598954619680">
+    <state width="699" height="245" key="GridCell.Tab.0.bottom" timestamp="1599016395053">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="699" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1598954619680" />
-    <state width="699" height="245" key="GridCell.Tab.0.center" timestamp="1598954619678">
+    <state width="699" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1599016395053" />
+    <state width="699" height="245" key="GridCell.Tab.0.center" timestamp="1599016395051">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="699" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1598954619678" />
-    <state width="699" height="245" key="GridCell.Tab.0.left" timestamp="1598954619677">
+    <state width="699" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1599016395051" />
+    <state width="699" height="245" key="GridCell.Tab.0.left" timestamp="1599016395049">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="699" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1598954619677" />
-    <state width="699" height="245" key="GridCell.Tab.0.right" timestamp="1598954619679">
+    <state width="699" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1599016395049" />
+    <state width="699" height="245" key="GridCell.Tab.0.right" timestamp="1599016395052">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="699" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1598954619679" />
+    <state width="699" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1599016395052" />
+    <state width="699" height="303" key="GridCell.Tab.1.bottom" timestamp="1599016358254">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="699" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1599016358254" />
+    <state width="699" height="303" key="GridCell.Tab.1.center" timestamp="1599016358253">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="699" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1599016358253" />
+    <state width="699" height="303" key="GridCell.Tab.1.left" timestamp="1599016358252">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="699" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1599016358252" />
+    <state width="699" height="303" key="GridCell.Tab.1.right" timestamp="1599016358254">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="699" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1599016358254" />
     <state x="326" y="103" key="SettingsEditor" timestamp="1598954596655">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="326" y="103" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1598954596655" />
-    <state x="383" y="219" width="824" height="528" key="find.popup" timestamp="1598952166998">
+    <state x="320" y="191" key="Vcs.Push.Dialog.v2" timestamp="1598954682729">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="383" y="219" width="824" height="528" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1598952166998" />
+    <state x="320" y="191" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1598954682729" />
+    <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1599015763230">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="720" height="450" key="XDebugger.FullValuePopup/0.0.1440.900@0.0.1440.900" timestamp="1599015763230" />
+    <state x="383" y="219" width="824" height="528" key="find.popup" timestamp="1599015865433">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="383" y="219" width="824" height="528" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1599015865433" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1599016118987">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1599016118987" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/cmd/example/main.go</url>
+          <line>40</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

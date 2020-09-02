@@ -4,6 +4,12 @@ import (
 	//自动设置GOMAXPROCS，用于处理运行在容器中CPU quota
 	_ "go.uber.org/automaxprocs"
 
+	"demo-server/app/example/router"
+	"demo-server/lib/mysql"
+	"demo-server/lib/redis"
+	"demo-server/lib/server"
+	"demo-server/middleware"
+
 	"github.com/urfave/cli"
 
 	"fmt"
@@ -46,5 +52,11 @@ func run(ctx *cli.Context) error {
 	}
 	log.Debug(conf.ToString())
 
+	redis.InitRedis()
+	mysql.InitDB()
+	//启动服务
+	app := server.New(middleware.Cors(), middleware.Hook())
+	app.RegisterAPIRouter(router.API)
+	app.Run(conf.Get("port").String("8081"))
 	return nil
 }

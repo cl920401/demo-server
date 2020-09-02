@@ -1,0 +1,29 @@
+{
+  "log":{
+    "level":-1
+  },
+  "port": ":8081",
+  "mysql": {
+    "default": {
+      "host": "127.0.0.1",
+      "port": 3306,
+      "username": "demo_server",
+      "password": "demo",
+      "dbname": "demo_server_db",
+      "charset": "utf8mb4",
+      "timeout": 300,
+      "max_open_conns": 10,
+      "max_idle_conns": 10
+    }
+  },
+  "redis": {
+    "default": {
+      "host": "127.0.0.1",
+      "port": 6379,
+      "password": "123456",
+      "idle_timeout": 300,
+      "max_active": 10,
+      "max_idle": 10
+    }
+  }
+}

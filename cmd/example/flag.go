@@ -15,7 +15,7 @@ var (
 	ConfigFlag = cli.StringFlag{
 		Name:        "config, c",
 		Usage:       "load configuration from `FILE`",
-		Value:       "./configs/example_conf.json",
+		Value:       "./configs/example/conf.json",
 		Destination: &config,
 	}
 	// RPCPortFlag rpc监听端口
